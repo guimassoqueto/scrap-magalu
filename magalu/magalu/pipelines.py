@@ -25,5 +25,5 @@ class FinishSpiderPipeline:
 
 def delete_files() -> None:
     if os.path.exists(DATA_FILE) and os.path.exists(LOG_FILE):
-        os.remove("logs.log")
+        os.remove(LOG_FILE)
         os.remove(DATA_FILE)
