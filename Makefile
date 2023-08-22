@@ -1,7 +1,7 @@
 COMPOSE=docker compose
 
 #  init containers (postgres, migrate, rabbitmq) and start scraping
-m: 
+a: 
 	cd magalu && poetry run python main.py
 
 # open repository in browser
