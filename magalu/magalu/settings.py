@@ -3,9 +3,10 @@ from logging import basicConfig, INFO
 from dotenv import load_dotenv
 from os import getenv
 
+LOG_FILE = "logs.log"
 configure_logging(install_root_handler=False)
 basicConfig(
-    filename="logs.log",
+    filename=LOG_FILE,
     format="[%(asctime)s] %(name)s %(levelname)s: %(message)s",
     level=INFO,
 )
@@ -66,4 +67,5 @@ REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
-FEEDS = {"magalu-products.csv": {"format": "csv"}}
+DATA_FILE = "data.csv"
+FEEDS = {DATA_FILE: {"format": "csv"}}

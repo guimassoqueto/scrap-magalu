@@ -9,6 +9,7 @@ import os
 from itemadapter import ItemAdapter
 
 from magalu.helpers.postgres import PostgresDB
+from magalu.settings import DATA_FILE, LOG_FILE
 
 
 class PlaywrightMagaluPipeline:
@@ -23,6 +24,6 @@ class FinishSpiderPipeline:
 
 
 def delete_files() -> None:
-    if os.path.exists("logs.log") or os.path.exists("magalu-products.csv"):
+    if os.path.exists(DATA_FILE) and os.path.exists(LOG_FILE):
         os.remove("logs.log")
-        os.remove("magalu-products.csv")
+        os.remove(DATA_FILE)
