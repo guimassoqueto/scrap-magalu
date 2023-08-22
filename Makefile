@@ -1,15 +1,17 @@
 COMPOSE=docker compose
 
 #  init containers (postgres, migrate, rabbitmq) and start scraping
-a:
+m: 
 	cd magalu && poetry run python main.py
 
 # open repository in browser
 or:
-	open https://github.com/guimassoqueto/scrap-magalu
+	open https://github.com/guimassoqueto/scraper-scrapy
 
 # create .env from .env.sample
 env:
 	cp .env.sample .env
 
+req:
+	poetry export -f requirements.txt --output requirements.txt
 
