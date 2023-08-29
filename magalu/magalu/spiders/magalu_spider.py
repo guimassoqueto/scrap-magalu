@@ -33,6 +33,7 @@ class MagaluSpiderSpider(scrapy.Spider):
             .get()
             .replace("'", "")
             .replace("\\", "")
+            .replace("\"", "")
         )
         product_item["reviews"] = get_reviews(response)
         product_item["free_shipping"] = "false"
