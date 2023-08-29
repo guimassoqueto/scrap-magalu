@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "scrap-magalu"
-version = "3.0.0"
+version = "3.0.3"
 description = "Scrap Magalu"
 authors = ["guimassoqueto <gui.massoqueto@gmail.com>"]
 readme = "README.md"
