@@ -6,7 +6,7 @@ a:
 
 # open repository in browser
 or:
-	open https://github.com/guimassoqueto/scraper-scrapy
+	open https://github.com/guimassoqueto/scrap-magalu
 
 # create .env from .env.sample
 env:
