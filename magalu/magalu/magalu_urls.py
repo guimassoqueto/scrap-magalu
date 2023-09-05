@@ -7,7 +7,7 @@ MAGALU_URLS = {
     "games": [f"https://www.magazineluiza.com.br/games/l/ga/seller---magazineluiza/?page={i}" for i in range(1, 2)],
     "mercado": [f"https://www.magazineluiza.com.br/mercado/l/me/seller---magazineluiza/?page={i}" for i in range(1, 16)],
     "moveis": [f"https://www.magazineluiza.com.br/moveis/l/mo/seller---magazineluiza/?page={i}" for i in range(1, 2)],
-    "tv_video": [f"https://www.magazineluiza.com.br/tv-e-video/l/et/seller---magazineluiza/?page={i}" for i in range(1, 2)],
+    "tv_video": [f"https://www.magazineluiza.com.br/tv-e-video/l/et/seller---magazineluiza/?page={i}" for i in range(1, 3)],
     "utilidades_domesticas": [f"https://www.magazineluiza.com.br/utilidades-domesticas/l/ud/seller---magazineluiza/?page={i}" for i in range(1, 11)],
     "smartphones": [f"https://www.magazineluiza.com.br/celulares-e-smartphones/l/te/seller---magazineluiza/?page={i}" for i in range(1, 3)]
 }
