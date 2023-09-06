@@ -27,7 +27,7 @@ class MagaluSpiderSpider(scrapy.Spider):
     def parse_product(self, response: HtmlResponse):
         product_item = ProductItem()
         product_item["category"] = get_category(response)
-        product_item["id"] = response.url
+        product_item["product_url"] = response.url
         product_item["title"] = (
             response.css('[data-testid="heading-product-title"]::text')
             .get()

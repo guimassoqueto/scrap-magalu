@@ -8,10 +8,10 @@ from magalu.settings import (
 )
 
 
-def upsert_query(table: str, item: dict) -> str:
-    insert = f"INSERT INTO {table}("
+def upsert_query(item: dict) -> str:
+    insert = f"INSERT INTO items("
     values = "VALUES("
-    on_conflict = "ON CONFLICT (id)\nDO UPDATE SET "
+    on_conflict = "ON CONFLICT (product_url)\nDO UPDATE SET "
     for key, value in item.items():
         insert += f"{key},"
 
@@ -34,4 +34,4 @@ class PostgresDB:
         conninfo = f"dbname={POSTGRES_DB} user={POSTGRES_USER} password={POSTGRES_PASSWORD} host={POSTGRES_HOST} port={POSTGRES_PORT}"
         async with await psycopg.AsyncConnection.connect(conninfo) as aconn:
             async with aconn.cursor() as cur:
-                await cur.execute(upsert_query(table, item))
+                await cur.execute(upsert_query(item))

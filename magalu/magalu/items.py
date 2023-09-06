@@ -7,7 +7,7 @@ from scrapy.item import Item, Field
 
 
 class ProductItem(Item):
-    id = Field()
+    product_url = Field()
     title = Field()
     category = Field()
     reviews = Field()
